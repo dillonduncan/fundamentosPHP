@@ -18,9 +18,28 @@
 
         #Variables
         //el punto(.) se usa para concatenar
-        $nombre="Dillon";
+        // if (isset($_GET["name"])) {
+        //     $nombre=$_GET["name"];
+        // }else{
+        //     $nombre= "Dillon";
+        // }
+        $nombre= validarName();
         $edad=18;
         echo "<p>"."Nombre: ".$nombre." Edad:".$edad. "</p>";
+
+        #GET
+        echo"<hr/>";
+        // $_GET["name"];
+
+        #funciones
+        function validarName(){
+            if (isset($_GET["name"])) {
+                $nombre=$_GET["name"];
+            }else{
+                $nombre= "Dillon";
+            }
+            return $nombre;
+        }
     ?>
 </body>
 </html>
