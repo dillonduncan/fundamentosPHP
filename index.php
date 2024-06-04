@@ -23,7 +23,7 @@
         // }else{
         //     $nombre= "Dillon";
         // }
-        $nombre= validarName();
+        $nombre= validarName("name");
         $edad=18;
         echo "<p>"."Nombre: ".$nombre." Edad:".$edad. "</p>";
 
@@ -32,14 +32,23 @@
         // $_GET["name"];
 
         #funciones
-        function validarName(){
-            if (isset($_GET["name"])) {
-                $nombre=$_GET["name"];
+        // function validarName(){
+        //     if (isset($_GET["name"])) {
+        //         $nombre=$_GET["name"];
+        //     }else{
+        //         $nombre= "Dillon";
+        //     }
+        //     return $nombre;
+        // }
+ function validarName($valor){
+            if (isset($_GET["$valor"])) {
+                $val=$_GET["$valor"];
             }else{
-                $nombre= "Dillon";
+                $val= "por defecto";
             }
-            return $nombre;
-        }
-    ?>
+            return $val;
+        }    
+        
+        ?>
 </body>
 </html>
