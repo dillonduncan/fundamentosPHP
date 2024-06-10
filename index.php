@@ -53,18 +53,47 @@
     }
 
     #Arrays
-    $personas=["Junior","Dillon","Naisir"];
+    $personas = ["Junior", "Dillon", "Naisir"];
     echo $personas[0];
     ?>
 
     <h3>Listado Array</h3>
     <ul>
         <?php
-            foreach ($personas as $person) {
-                echo "<li>". $person ."</li>";
-            }
+        foreach ($personas as $person) {
+            echo "<li>" . $person . "</li>";
+        }
         ?>
     </ul>
+
+    #Ciclos
+    <p>ciclo for</p>
+    <?php
+    for ($i = 1; $i <= 5; $i++) {
+        echo " $i\n";
+        echo "<br/>";
+    }
+    ?>
+    <hr>
+    <p>ciclo while</p>
+    <?php
+    $num = 5;
+    while ($num >= 0) {
+        echo " $num\n";
+        echo "<br/>";
+        $num--;
+    }
+    ?>
+    <hr>
+    <p>ciclo do while</p>
+    <?php
+    $num = 5;
+    do {
+        echo"Carlitos <br/>";
+        $num--;
+    }
+    while ($num >= 0) 
+    ?>
 </body>
 
 </html>
