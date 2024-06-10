@@ -34,14 +34,15 @@
     // $_GET["name"];
 
     #funciones
-    // function validarName(){
-    //     if (isset($_GET["name"])) {
-    //         $nombre=$_GET["name"];
-    //     }else{
-    //         $nombre= "Dillon";
-    //     }
-    //     return $nombre;
-    // }
+    function EdadPersona()
+    {
+        $edad = 18;
+        echo $edad;
+    }
+    EdadPersona();
+    echo "<br>";
+    echo $edad;
+    echo "<br>";
     function validarName($valor)
     {
         if (isset($_GET["$valor"])) {
@@ -66,7 +67,7 @@
         ?>
     </ul>
 
-    #Ciclos
+    <!-- ciclos -->
     <p>ciclo for</p>
     <?php
     for ($i = 1; $i <= 5; $i++) {
@@ -89,10 +90,31 @@
     <?php
     $num = 5;
     do {
-        echo"Carlitos <br/>";
+        echo "Carlitos <br/>";
         $num--;
+    } while ($num >= 0)
+    ?>
+
+    <!-- variables globales -->
+    <hr>
+    <p>variables globales</p>
+    <?php
+    $num1 = 5;
+    $num2 = 5;
+    function sumar()
+    {
+        $GLOBALS['suma'] = $GLOBALS['num1'] + $GLOBALS['num2'];
     }
-    while ($num >= 0) 
+    sumar();
+    echo $suma ."<br>";
+
+    echo $_SERVER['SERVER_NAME']."<br>";
+    ?>
+
+
+    <?php
+        $numero=$_GET['numero'];
+        echo "El numero es: ".$numero;
     ?>
 </body>
 
